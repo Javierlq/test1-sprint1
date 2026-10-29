@@ -1,1 +1,2 @@
-v1
+La versión actual de este archivo es: v1
+
