@@ -110,5 +110,14 @@ Para habilitar el servicio ssh desde el arranque del sistema, utilizaría 'sudo 
 Para reiniciar el servicio de ssh utilizaría 'sudo systemctl restart ssh'
 Para visualizar los logs de la última hora, utilizaría 'journalctl -u ssh --since 1h', ya que journalctl contiene los logs de servicios, donde con -u ssh especificamos que nos referimos al servicio de ssh y con --since 1h indicamos que muestre los logs de la última hora
 ===================BLOQUE 2=======================
-Respuesta B1
 Las respuestas del bloque 2 se encuentran en sus debidos scripts en las carpetas logs, app y scripts.
+
+
+===================BLOQUE 3=======================
+
+G1: 
+
+G2: 
+
+G3:
+
