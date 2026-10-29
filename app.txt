@@ -1,1 +1,1 @@
-v1
+Esta es la versión del archivo app.txt :v2
