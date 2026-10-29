@@ -1,0 +1,114 @@
+Respuesta 1.1: chmod 744 deploy.sh
+
+deploy ok
+========================
+Respuesta 1.2: 
+ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 09:48 ?        00:00:01 /sbin/init
+root           2       1  0 09:48 hvc0     00:00:00 /init
+root           3       2  0 09:48 hvc0     00:00:00 init-watcher
+root           7       2  0 09:48 hvc0     00:00:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --
+root          40       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd-journald
+root          89       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+     112       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+systemd+     115       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd-timesyncd
+root         167       1  0 09:48 ?        00:00:00 /usr/sbin/cron -f -P
+message+     168       1  0 09:48 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --syst
+root         175       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd-logind
+syslog       181       1  0 09:48 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         201       1  0 09:48 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         210       1  0 09:48 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-s
+root         290       2  0 09:48 ?        00:00:00 /init
+root         291     290  0 09:48 ?        00:00:00 /init
+javier-+     292     291  0 09:48 pts/0    00:00:00 -bash
+root         293       2  0 09:48 pts/1    00:00:00 /bin/login -f
+javier-+     337       1  0 09:48 ?        00:00:00 /usr/lib/systemd/systemd --user
+javier-+     338     337  0 09:48 ?        00:00:00 (sd-pam)
+javier-+     359     293  0 09:48 pts/1    00:00:00 -bash
+polkitd      662       1  0 09:49 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+root        1279       1  0 09:50 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+javier-+    1797     291  0 09:53 pts/0    00:00:00 python3 -m http.server 8088
+javier-+    1852     292  0 10:14 pts/0    00:00:00 ps -ef
+
+========================
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba/app$ kill 1797
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba/app$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 09:47 ?        00:00:01 /sbin/init
+root           2       1  0 09:47 hvc0     00:00:00 /init
+root           3       2  0 09:47 hvc0     00:00:00 init-watcher
+root           7       2  0 09:47 hvc0     00:00:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --
+root          40       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd-journald
+root          89       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+     112       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+systemd+     115       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd-timesyncd
+root         167       1  0 09:47 ?        00:00:00 /usr/sbin/cron -f -P
+message+     168       1  0 09:47 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --syst
+root         175       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd-logind
+syslog       181       1  0 09:47 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         201       1  0 09:47 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+root         210       1  0 09:47 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-s
+root         290       2  0 09:47 ?        00:00:00 /init
+root         291     290  0 09:47 ?        00:00:00 /init
+javier-+     292     291  0 09:47 pts/0    00:00:00 -bash
+root         293       2  0 09:47 pts/1    00:00:00 /bin/login -f
+javier-+     337       1  0 09:47 ?        00:00:00 /usr/lib/systemd/systemd --user
+javier-+     338     337  0 09:47 ?        00:00:00 (sd-pam)
+javier-+     359     293  0 09:47 pts/1    00:00:00 -bash
+polkitd      662       1  0 09:48 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+root        1279       1  0 09:49 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        1857       1  0 10:18 ?        00:00:00 /usr/libexec/wsl-pro-service
+javier-+    1886     292  0 10:23 pts/0    00:00:00 ps -ef
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba/app$ sudo lsof -n -i :8088 | grep LISTEN
+========================
+Respuesta 1.3: 
+backups/old.bak
+12K	./app
+44K	./logs
+51M	.
+51M	./backups
+
+========================
+ Respuesta 1.4:
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba$ sudo groupadd devops
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba$ sudo useradd -s /usr/sbin/nologin -G devops deployer
+javier-peralta@ZG-JAVIER-PERALTA:~/prueba$ sudo chown :devops ~/prueba/app
+
+drwx-w---- 2 javier-peralta devops 4096 Oct 29 09:55 /home/javier-peralta/prueba/app
+
+getent group | grep deployer
+
+devops:x:1001:deployer
+deployer:x:1002:
+
+=======================================
+Repuesta 1.5:
+
+sudo service ssh status 
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-29 09:52:02 -03; 1h 13min ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 1277 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 1279 (sshd)
+      Tasks: 1 (limit: 9039)
+     Memory: 1.2M (peak: 1.6M)
+        CPU: 16ms
+     CGroup: /system.slice/ssh.service
+             └─1279 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+
+journalctl -u ssh -n 20
+Oct 29 09:52:02 ZG-JAVIER-PERALTA systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Oct 29 09:52:02 ZG-JAVIER-PERALTA sshd[1279]: Server listening on 0.0.0.0 port 22.
+Oct 29 09:52:02 ZG-JAVIER-PERALTA sshd[1279]: Server listening on :: port 22.
+Oct 29 09:52:02 ZG-JAVIER-PERALTA systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Para habilitar el servicio ssh desde el arranque del sistema, utilizaría 'sudo systemctl enable ssh', de esa manera siempre se iniciaría en conjunto con el arranque del sistema.
+Para reiniciar el servicio de ssh utilizaría 'sudo systemctl restart ssh'
+Para visualizar los logs de la última hora, utilizaría 'journalctl -u ssh --since 1h', ya que journalctl contiene los logs de servicios, donde con -u ssh especificamos que nos referimos al servicio de ssh y con --since 1h indicamos que muestre los logs de la última hora
+===================BLOQUE 2=======================
+Respuesta B1
+Las respuestas del bloque 2 se encuentran en sus debidos scripts en las carpetas logs, app y scripts.

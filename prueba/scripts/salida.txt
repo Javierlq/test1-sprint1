@@ -1,0 +1,6 @@
+errores.txt
+hijo.sh
+respuesta_B5_redireccion.txt
+salida.txt
+script_bucles.sh
+script_redireccion.sh

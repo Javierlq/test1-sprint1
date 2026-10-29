@@ -1,0 +1,6 @@
+La diferencia entre utilizar o no export para compartir la variable radica en que, al momento de usar
+el export, la variable se transforma en una Variable de entorno, permitiendo ser utilizada en otros
+scripts, sin necesidad de tener que estar incorporando ciertas variables compartidas de forma manual
+en los scripts que requieran de información de un script anterior.
+
+En caso que, por ejemplo, 
