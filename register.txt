@@ -1,1 +1,3 @@
 Este archivo contiene la información para poder crear la función de registro.O
+
+Ahora ya se completó el archivo, se incorporará la función de registro.
