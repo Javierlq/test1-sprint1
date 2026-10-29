@@ -231,3 +231,10 @@ nano resultados_git.txt
 mv resultados_git.txt respuesta_g4.txt
 nano respuesta_g4.txt 
 git add ,
+git add .
+git commit -m "agregar archivo con respuesta_g4"
+git switch -c feature/register
+nano register.txt
+git add .
+git checkout -- .bash_history && git stash pop
+git status
