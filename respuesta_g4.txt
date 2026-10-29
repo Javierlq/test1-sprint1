@@ -1,0 +1,9 @@
+Para estos casos, lo mejor es utilizar git revert <commit> para poder volver al commit estable donde
+no se encontraba el archivo defectuoso. De esta manera, no modificamos la historia y es seguro para un
+trabajo en colaboración remota.
+
+El único caso en que sería viable utilizar git reset --hard es cuando estamos trabajando localmente
+con un commit que no hemos pusheado y todo el contenido que tengamos en ese commit sea realmente
+defectuoso, ya que este comando es extremadamente destructivo y eliminará todo el trabajo que hayamos
+hecho en ese commit.
+

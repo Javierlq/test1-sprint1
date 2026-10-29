@@ -215,3 +215,19 @@ ls
 cat errores_5xx.txt
 grep -i 5xx access.log
 nano access.log
+git reset --hard 5d0e4aa
+git log --oneline --graph --all
+git stash drop
+git stash list
+git log --oneline --graph --all
+ls
+git revert 5d0e4aa
+git log --oneline --graph --all
+ls
+nano resultados_git.txt
+git status
+git add .
+nano resultados_git.txt 
+mv resultados_git.txt respuesta_g4.txt
+nano respuesta_g4.txt 
+git add ,
