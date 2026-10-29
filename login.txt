@@ -1,0 +1,3 @@
+Este archivo contiene credenciales de inicio de sesión:
+Nombre de usuario: javier
+contraseña: ****
