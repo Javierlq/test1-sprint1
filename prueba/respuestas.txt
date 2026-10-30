@@ -63,6 +63,7 @@ javier-+    1886     292  0 10:23 pts/0    00:00:00 ps -ef
 javier-peralta@ZG-JAVIER-PERALTA:~/prueba/app$ sudo lsof -n -i :8088 | grep LISTEN
 ========================
 Respuesta 1.3: 
+find * -type -f -mtime +30 -size +10M
 backups/old.bak
 12K	./app
 44K	./logs
@@ -106,18 +107,14 @@ Oct 29 09:52:02 ZG-JAVIER-PERALTA systemd[1]: Starting ssh.service - OpenBSD Sec
 Oct 29 09:52:02 ZG-JAVIER-PERALTA sshd[1279]: Server listening on 0.0.0.0 port 22.
 Oct 29 09:52:02 ZG-JAVIER-PERALTA sshd[1279]: Server listening on :: port 22.
 Oct 29 09:52:02 ZG-JAVIER-PERALTA systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-Para habilitar el servicio ssh desde el arranque del sistema, utilizaría 'sudo systemctl enable ssh', de esa manera siempre se iniciaría en conjunto con el arranque del sistema.
-Para reiniciar el servicio de ssh utilizaría 'sudo systemctl restart ssh'
-Para visualizar los logs de la última hora, utilizaría 'journalctl -u ssh --since 1h', ya que journalctl contiene los logs de servicios, donde con -u ssh especificamos que nos referimos al servicio de ssh y con --since 1h indicamos que muestre los logs de la última hora
+- Para habilitar el servicio ssh desde el arranque del sistema, utilizaría 'sudo systemctl enable ssh', de esa manera siempre se iniciaría en conjunto con el arranque del sistema.
+- Para reiniciar el servicio de ssh utilizaría 'sudo systemctl restart ssh'
+- Para visualizar los logs de la última hora, utilizaría 'journalctl -u ssh --since 1h', ya que journalctl contiene los logs de servicios, donde con -u ssh especificamos que nos referimos al servicio de ssh y con --since 1h indicamos que muestre los logs de la última hora
 ===================BLOQUE 2=======================
 Las respuestas del bloque 2 se encuentran en sus debidos scripts en las carpetas logs, app y scripts.
 
 
 ===================BLOQUE 3=======================
 
-G1: 
-
-G2: 
-
-G3:
+Las respuestas y evidencias del bloque 3 se encuentran dentro de la carpeta de 'Screenshots para Git'
 
